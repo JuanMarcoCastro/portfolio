@@ -8,7 +8,7 @@ export function Hero() {
       <Navbar />
       <div className="container flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] py-12 text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-          Hi, I'm <span className="text-primary">Your Name</span>
+          Hi, I'm <span className="text-primary">Juan Marco</span>
         </h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-md mx-auto">
           Web Developer & Designer creating modern and responsive web experiences
