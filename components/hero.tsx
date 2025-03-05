@@ -11,7 +11,7 @@ export function Hero() {
           Hi, I'm <span className="text-primary">Juan Marco</span>
         </h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-md mx-auto">
-          Data Scientist & Developer creating fun and intellectual projects
+          Data Scientist & Developer creating fun and intellectual projects (Webpage still in development)
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <Button asChild size="lg">
