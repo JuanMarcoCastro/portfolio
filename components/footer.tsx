@@ -12,7 +12,7 @@ export function Footer() {
             </p>
           </div>
           <div className="flex space-x-6">
-            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="https://github.com/JuanMarcoCastro" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
