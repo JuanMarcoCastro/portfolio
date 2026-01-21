@@ -11,8 +11,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-bold text-xl">
-          Your Name
+        <Link href="/" className="font-bold text-xl text-primary">
+          Juan Marco Castro
         </Link>
 
         {/* Mobile menu button */}
@@ -23,48 +23,48 @@ export function Navbar() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex gap-6">
-          <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">
             About
           </Link>
-          <Link href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/#skills" className="text-muted-foreground hover:text-primary transition-colors font-medium">
             Skills
           </Link>
-          <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/#projects" className="text-muted-foreground hover:text-primary transition-colors font-medium">
             Projects
           </Link>
-          <Link href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">
             Contact
           </Link>
         </nav>
 
         {/* Mobile navigation */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden">
+          <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden shadow-lg">
             <nav className="flex flex-col p-4 gap-4">
               <Link
-                href="#about"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="/#about"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
-                href="#skills"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="/#skills"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Skills
               </Link>
               <Link
-                href="#projects"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="/#projects"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link
-                href="#contact"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="/#contact"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

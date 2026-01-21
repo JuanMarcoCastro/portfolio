@@ -6,9 +6,16 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Juan Marco - Portfolio",
-  description: "Personal portfolio website showcasing my projects and skills",
-    generator: 'v0.dev'
+  title: "Juan Marco Castro Trinidad - Data Scientist & Developer",
+  description: "Portfolio profesional de Juan Marco Castro Trinidad. Especializado en Data Science, Machine Learning, análisis de datos y desarrollo de soluciones inteligentes.",
+  generator: 'v0.dev',
+  keywords: ["Data Science", "Machine Learning", "Python", "R", "SQL", "Portfolio", "Juan Marco Castro"],
+  authors: [{ name: "Juan Marco Castro Trinidad" }],
+  openGraph: {
+    title: "Juan Marco Castro Trinidad - Data Scientist",
+    description: "Portfolio profesional - Data Science & Machine Learning",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
@@ -17,12 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={inter.className}>{children}</body>
     </html>
   )
 }
-
-
-
-import './globals.css'
