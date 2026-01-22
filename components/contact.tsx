@@ -28,31 +28,33 @@ export function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const form = e.target as HTMLFormElement
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+
+      if (response.ok) {
+        setIsSubmitting(false)
+        setSubmitMessage("Thank you for your message! I'll get back to you soon.")
+        setFormData({ name: "", email: "", message: "" })
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitMessage(""), 5000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
       setIsSubmitting(false)
-      setSubmitMessage("Thank you for your message! I'll get back to you soon.")
-      setFormData({ name: "", email: "", message: "" })
-
-      // Clear success message after 5 seconds
+      setSubmitMessage("There was an error sending your message. Please try again or email me directly.")
+      
+      // Clear error message after 5 seconds
       setTimeout(() => setSubmitMessage(""), 5000)
-    }, 1500)
-
-    // In a real application, you would send the form data to a server or service
-    // Example:
-    // try {
-    //   const response = await fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(formData)
-    //   })
-    //   const data = await response.json()
-    //   setSubmitMessage(data.message)
-    // } catch (error) {
-    //   setSubmitMessage('There was an error sending your message. Please try again.')
-    // } finally {
-    //   setIsSubmitting(false)
-    // }
+    }
   }
 
   return (
@@ -126,7 +128,17 @@ export function Contact() {
           </div>
           <Card className="border-primary/20 shadow-lg">
             <CardContent className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form 
+                onSubmit={handleSubmit} 
+                action="https://formsubmit.co/juanmarco.ct@gmail.com"
+                method="POST"
+                className="space-y-4"
+              >
+                {/* FormSubmit Configuration */}
+                <input type="hidden" name="_subject" value="New contact from Portfolio Website!" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
                     Name
