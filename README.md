@@ -1,6 +1,6 @@
 # Portfolio - Juan Marco Castro Trinidad
 
-Portfolio profesional de Juan Marco Castro Trinidad - Data Scientist & Developer
+Portfolio profesional de Juan Marco Castro Trinidad - Data Scientist & Developer & Economist
 
 ## 🚀 Características
 
